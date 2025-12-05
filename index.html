@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily-Scope</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-custom navbar-expand-lg">
+        <div class="container">
+            <div class="d-flex align-items-center brand-section">
+                <img src="./Assets/title svg.png" class="img-svg" alt="Daily-Scope">
+                <h5>Daily-Scope</h5>
+            </div>
+
+            <div class="right-icons d-lg-none">
+                <a href="#" class="icon-link2"><i class="fa-regular fa-circle-play"></i> Live</a>
+                <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+            </div>
+
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mobile-search-wrapper">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search..." id="mobileSearchInput">
+                    </div>
+                </div>
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link-custom category-link" href="#" data-category="general">
+                            News <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu-custom">
+                            <li><a href="#" class="category-link" data-category="general">World</a></li>
+                            <li><a href="#" class="category-link" data-category="business">Economy</a></li>
+                            <li><a href="#" class="category-link" data-category="technology">Tech</a></li>
+                            <li><a href="#" class="category-link" data-category="entertainment">Entertainment</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link-custom category-link" href="#" data-category="business">MiddleEast</a></li>
+                    <li class="nav-item"><a class="nav-link-custom category-link" href="#" data-category="technology">Explained</a></li>
+                    <li class="nav-item"><a class="nav-link-custom category-link" href="#" data-category="entertainment">Opinion</a></li>
+                    <li class="nav-item"><a class="nav-link-custom category-link" href="#" data-category="sports">Sport</a></li>
+                    <li class="nav-item"><a class="nav-link-custom category-link" href="#" data-category="general">Video</a></li>
+
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link-custom" href="#">
+                            More <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu-custom">
+                            <li><a href="#" class="category-link" data-category="health">Health</a></li>
+                            <li><a href="#" class="category-link" data-category="science">Science</a></li>
+                            <li><a href="#" class="category-link" data-category="general">Lifestyle</a></li>
+                            <li><a href="#" class="category-link" data-category="general">Travel</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-icons d-none d-lg-flex">
+                <a href="#" class="icon-link2 me-3"><i class="fa-regular fa-circle-play"></i> Live</a>
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search..." id="desktopSearchInput">
+                </div>
+                <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="trending-bar">
+        <div class="container">
+            <button class="trending-arrow trending-arrow-left hidden" id="trendingLeft">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="d-flex flex-wrap d-none d-lg-flex">
+                <a href="./index.html" class="fw-bold me-3 trending-heading trending-category" data-category="general" id="trendingBtn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Trending
+                </a>
+                <a href="#" class="trending-tag trending-category" data-category="politics">Politics</a>
+                <a href="#" class="trending-tag trending-category" data-category="business">Business</a>
+                <a href="#" class="trending-tag trending-category" data-category="technology">Technology</a>
+                <a href="#" class="trending-tag trending-category" data-category="sports">Sports</a>
+                <a href="#" class="trending-tag trending-category" data-category="entertainment">Entertainment</a>
+            </div>
+
+            <div class="d-block d-lg-none">
+                <div class="trending-wrapper">
+                    <div class="trending-scroll" id="trendingScroll">
+                        <a href="#" class="trending-heading trending-category" data-category="general" id="mobileTrendingBtn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Trending
+                        </a>
+                        <a href="#" class="trending-tag trending-category" data-category="business">Business</a>
+                        <a href="#" class="trending-tag trending-category" data-category="technology">Tech</a>
+                        <a href="#" class="trending-tag trending-category" data-category="sports">Sports</a>
+                        <a href="#" class="trending-tag trending-category" data-category="entertainment">Entertainment</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="trending-arrow trending-arrow-right" id="trendingRight">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-4" id="mainContent">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h3 id="currentCategoryTitle">Trending</h3>
+            <div class="search-status" id="searchStatus" style="display: none;">
+                <small class="text-muted">Search results for: <span id="searchQueryText"></span></small>
+                <button class="btn btn-sm btn-outline-secondary ms-3" id="clearSearchBtn">
+                    <i class="fas fa-times"></i> Clear Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEH PART CHANGE KARO - EMPTY RAHKHO -->
+    <div class="row" id="newsContainer">
+        <!-- News yahan automatically load honge -->
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <button class="btn btn-primary" id="loadMoreBtn" style="display: none;">
+                <i class="fas fa-plus"></i> Load More News
+            </button>
+        </div>
+    </div>
+</div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-main">
+                <div class="col-md-3 col-6 mb-4">
+                    <h6 class="footer-heading">About</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Code of Ethics</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">EU/EEA Regulatory Notice</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h6 class="footer-heading">Connect</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">User Accounts Help</a></li>
+                        <li><a href="#">Advertise with us</a></li>
+                        <li><a href="#">Stay Connected</a></li>
+                        <li><a href="#">Newsletters</a></li>
+                        <li><a href="#">Channel Finder</a></li>
+                        <li><a href="#">TV Schedule</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Submit a Tip</a></li>
+                        <li><a href="#">Partner's Paid Partner Content</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h6 class="footer-heading">Our Channels</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Al Jazeera Arabic</a></li>
+                        <li><a href="#">Al Jazeera English</a></li>
+                        <li><a href="#">Al Jazeera Investigative Unit</a></li>
+                        <li><a href="#">Al Jazeera Mubasher</a></li>
+                        <li><a href="#">Al Jazeera Documentary</a></li>
+                        <li><a href="#">Al Jazeera Balkans</a></li>
+                        <li><a href="#">A.J+</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h6 class="footer-heading">Our Network</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Al Jazeera Centre for Studies</a></li>
+                        <li><a href="#">Al Jazeera Media Institute</a></li>
+                        <li><a href="#">Learn Arabic</a></li>
+                        <li><a href="#">Al Jazeera Centre for Public Liberties & Human Rights</a></li>
+                        <li><a href="#">Al Jazeera Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row social-section">
+                <div class="col-12">
+                    <h6 class="footer-heading mb-3">Follow Daily-Scope:</h6>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row work-section">
+                <div class="col-12">
+                    <a href="#" class="work-link">
+                        <i class="fas fa-briefcase me-2"></i> Work for us
+                    </a>
+                </div>
+            </div>
+
+            <div class="row copyright-section">
+                <div class="col-12">
+                    <p class="copyright-text">
+                        &copy; 2025 Daily-Scope Media Network. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
